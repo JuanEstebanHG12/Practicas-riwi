@@ -1,7 +1,7 @@
 from colorama import Fore
-from validations import validate_inputs, validation_string
+from validations import validate_inputs, validation_string, validation_names
 from login import login_user
-from crud_equipos import create_team, list_teams
+from crud_equipos import create_team, list_teams,update_team_menu, delete_team
 
 teams_list = []
 def main_menu():
@@ -16,16 +16,18 @@ def main_menu():
             opcion = validate_inputs(str, "Choose an option: ", validation_string)
             match opcion:
                 case '1':
-                    team_name = validate_inputs(str, "Type the name of team: ", validation_string).lower()
+                    team_name = validate_inputs(str, "Type the name of team: ", validation_names).lower()
                     city = validate_inputs(str, "Type the team's city: ", validation_string).lower()
                     league = validate_inputs(str, "Type the team's league: ", validation_string).lower()
-                    print(create_team(teams_list, team_name, city, league))
+                    create_team(teams_list, team_name, city, league)
                 case '2':
                     list_teams(teams_list)
                 case '3':
-                    print("3")
+                    team_name = validate_inputs(str, "Type the name of team: ", validation_names).lower()
+                    update_team_menu(teams_list,team_name)
                 case '4':
-                    print("4")
+                    team_name = validate_inputs(str, "Type the name of team: ", validation_names).lower()
+                    delete_team(teams_list, team_name)
                 case '0':
                     break
                 case _:
