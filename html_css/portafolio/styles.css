@@ -33,6 +33,37 @@ header{
     display: flex;
     justify-content: space-evenly;
 }
+li{
+    position: relative;
+}
+.nav-item::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    bottom: 0px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all .5s ease;
+}
+.nav-item:hover::after{
+    width: 100%;
+}
 .nav-item:hover{
     color: blue;
+}
+
+/* Cards mascotas */
+.card{
+    width: 20%;
+    box-shadow: 4px 4px 8px gray;
+    margin: 20px;
+    border-radius: 8px;
+}
+.card > img{
+    width: 100%;
+    border-radius: 8px 8px 0  0;
+}
+.card > p{
+    padding: 10px;
 }
