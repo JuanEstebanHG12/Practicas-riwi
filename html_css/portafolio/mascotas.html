@@ -18,7 +18,7 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <section class="mascotas-container">
         <div class="card" id="openDialogBtn">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL9fHlbHHIAeW4ST_vi6H--8STNR3P7R_5Iw&s"
                 alt="Imagen de Max, un Golden reatriver">
@@ -52,9 +52,6 @@
             </p>
         </div>
     </section>
-    <!-- Botón para abrir el diálogo -->
-    <button id="">Abrir Diálogo</button>
-
     <!-- Diálogo -->
     <dialog id="myDialog">
         <h2>¡Este es un Diálogo!</h2>
@@ -62,6 +59,7 @@
         <button id="closeDialogBtn">Cerrar</button>
     </dialog>
     <script>
+        list =[1,2,3]
         // Obtiene el diálogo y los botones
         var dialog = document.getElementById("myDialog");
         var openDialogBtn = document.getElementById("openDialogBtn");
@@ -69,13 +67,13 @@
 
         // Cuando el usuario hace clic en el botón de abrir, se muestra el diálogo
         openDialogBtn.onclick = function () {
-            dialog.showModal(); // showModal() abre el diálogo y lo hace modal
+            dialog.showModal();
             dialog.style.opacity = 1
         }
 
         // Cuando el usuario hace clic en el botón de cerrar, se cierra el diálogo
         closeDialogBtn.onclick = function () {
-            dialog.close(); // close() cierra el diálogo
+            dialog.close();
             dialog.style.opacity = 0
         }
     </script>
