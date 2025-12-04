@@ -19,28 +19,66 @@
         </nav>
     </header>
     <section>
-        <div class="card">
+        <div class="card" id="openDialogBtn">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL9fHlbHHIAeW4ST_vi6H--8STNR3P7R_5Iw&s"
                 alt="Imagen de Max, un Golden reatriver">
             <p>
-                Max es un Golden Retriever de 4 años, con un pelaje dorado y brillante. Es un perro amigable y cariñoso, siempre buscando compañía y dispuesto a jugar. Su energía es inagotable, especialmente cuando está al aire libre, pero también es tranquilo y le encanta acurrucarse en casa. Su mirada siempre refleja ternura y le encanta recibir caricias.
+                Max es un Golden Retriever de 4 años, con un pelaje dorado y brillante. Es un perro amigable y cariñoso,
+                siempre buscando compañía y dispuesto a jugar. Su energía es inagotable, especialmente cuando está al
+                aire libre, pero también es tranquilo y le encanta acurrucarse en casa. Su mirada siempre refleja
+                ternura y le encanta recibir caricias.
             </p>
         </div>
         <div class="card">
             <img src="https://www.hola.com/horizon/landscape/ffea2864ee26-rottweiler-t.jpg"
                 alt="Imagen de Rocky, un Rottweiler">
             <p>
-                Rocky es un imponente Rottweiler de 5 años, con un pelaje negro y marrón bien definido que resalta su fuerza y confianza. Es un perro leal y protector, siempre atento a su entorno y muy cercano a su familia. Aunque su apariencia puede intimidar, es sorprendentemente cariñoso con los suyos, especialmente con los niños. A Rocky le encanta hacer ejercicio y mantener su energía al máximo, pero también sabe relajarse y disfrutar de un buen descanso junto a su dueño.
+                Rocky es un imponente Rottweiler de 5 años, con un pelaje negro y marrón bien definido que resalta su
+                fuerza y confianza. Es un perro leal y protector, siempre atento a su entorno y muy cercano a su
+                familia. Aunque su apariencia puede intimidar, es sorprendentemente cariñoso con los suyos,
+                especialmente con los niños. A Rocky le encanta hacer ejercicio y mantener su energía al máximo, pero
+                también sabe relajarse y disfrutar de un buen descanso junto a su dueño.
             </p>
         </div>
         <div class="card">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqfof_xRFs7tvKe3VmnFV1AHyj4CA0QVFtMw&s"
                 alt="Imagen de Zeus, un Doberman">
             <p>
-                Zeus es un Doberman elegante y atlético, con un pelaje corto y brillante que resalta su figura musculosa y poderosa. A sus 3 años, es un perro alerta, leal y muy protector con su familia. Aunque tiene una presencia imponente, es sorprendentemente cariñoso y juguetón, especialmente con los niños. Siempre en movimiento, Zeus disfruta de correr y hacer ejercicio, pero también es muy equilibrado, sabiendo cuándo relajarse y estar tranquilo junto a los suyos.
+                Zeus es un Doberman elegante y atlético, con un pelaje corto y brillante que resalta su figura musculosa
+                y poderosa. A sus 3 años, es un perro alerta, leal y muy protector con su familia. Aunque tiene una
+                presencia imponente, es sorprendentemente cariñoso y juguetón, especialmente con los niños. Siempre en
+                movimiento, Zeus disfruta de correr y hacer ejercicio, pero también es muy equilibrado, sabiendo cuándo
+                relajarse y estar tranquilo junto a los suyos.
             </p>
         </div>
     </section>
+    <!-- Botón para abrir el diálogo -->
+    <button id="">Abrir Diálogo</button>
+
+    <!-- Diálogo -->
+    <dialog id="myDialog">
+        <h2>¡Este es un Diálogo!</h2>
+        <p>Este es un contenido dentro de un cuadro de diálogo. Puedes poner cualquier cosa aquí.</p>
+        <button id="closeDialogBtn">Cerrar</button>
+    </dialog>
+    <script>
+        // Obtiene el diálogo y los botones
+        var dialog = document.getElementById("myDialog");
+        var openDialogBtn = document.getElementById("openDialogBtn");
+        var closeDialogBtn = document.getElementById("closeDialogBtn");
+
+        // Cuando el usuario hace clic en el botón de abrir, se muestra el diálogo
+        openDialogBtn.onclick = function () {
+            dialog.showModal(); // showModal() abre el diálogo y lo hace modal
+            dialog.style.opacity = 1
+        }
+
+        // Cuando el usuario hace clic en el botón de cerrar, se cierra el diálogo
+        closeDialogBtn.onclick = function () {
+            dialog.close(); // close() cierra el diálogo
+            dialog.style.opacity = 0
+        }
+    </script>
 </body>
 
 </html>

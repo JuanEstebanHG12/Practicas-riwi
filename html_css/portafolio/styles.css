@@ -9,23 +9,27 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-ul{
-    list-style: none;;
+ul {
+    list-style: none;
+    ;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
-main{
+
+main {
     padding: 0 10%;
 }
 
 
-.title-section{
-    text-align: center  ;
+.title-section {
+    text-align: center;
 }
+
 /* Navbar */
-header{
+header {
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -34,62 +38,116 @@ header{
     box-shadow: 0px .1px 5px;
     margin-bottom: 50px;
 }
-.navbar{
+
+.navbar {
     width: 20%;
 }
-.navbar > ul{
+
+.navbar>ul {
     display: flex;
     justify-content: space-evenly;
 }
-li{
+
+li {
     position: relative;
 }
-.nav-item::after{
+
+.nav-item::after {
     content: "";
     position: absolute;
     background-color: black;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     width: 0;
     height: 1px;
     transition: width .3s ease;
 }
-.nav-item:hover::after{
+
+.nav-item:hover::after {
     width: 100%;
 }
 
 
 /* Cards mascotas */
-.card{
+.card {
     width: 20%;
     box-shadow: 4px 4px 8px gray;
     margin: 20px;
     border-radius: 8px;
+    transition: transform 1s ease;
 }
-.card > img{
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card>img {
     width: 100%;
-    border-radius: 8px 8px 0  0;
+    border-radius: 8px 8px 0 0;
 }
-.card > p{
+
+.card>p {
     padding: 10px;
 }
 
 /* contact-section */
-.contact-section{
+.contact-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 /* formulario */
-form{
+form {
     border: 1px solid lightgrey;
     border-radius: 8px;
     width: 40%;
     padding: 2%;
 }
-fieldset{
+
+form label::after {
+    content: "*";
+    color: red;
+}
+
+fieldset {
     padding: 2%;
 }
 
+/* Estilos para el diálogo */
+dialog {
+    border: none;
+    /* Quitar borde predeterminado */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
 
+    /* Transiciones */
+    opacity: 0;
+    transform: scale(0.95);
+    /* Comienza ligeramente más pequeño */
+    transition: opacity 2s ease, transform 5s ease;
+    /* Transición suave para opacidad y tamaño */
+
+    /* Estilo de sombra */
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+
+    /* Asegurarse de que el diálogo esté centrado */
+    position: fixed;
+    top: 50%;
+    /* Posicionar verticalmente en el centro */
+    left: 50%;
+    /* Posicionar horizontalmente en el centro */
+    transform: translate(-50%, -50%);
+    /* Ajustar el diálogo a su tamaño completo */
+
+}
+
+/* Estilo para el fondo oscuro (overlay) */
+dialog::backdrop {
+    background: rgba(151, 49, 49, 0.5);
+    /* Fondo oscuro con opacidad */
+}
