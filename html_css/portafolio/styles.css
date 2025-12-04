@@ -7,6 +7,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(40, 231, 238, 0.123);
 }
 
 ul {
@@ -37,6 +38,8 @@ header {
     padding: 0 5%;
     box-shadow: 0px .1px 5px;
     margin-bottom: 50px;
+    background-color: black;
+    color: white;
 }
 
 .navbar {
@@ -52,10 +55,13 @@ li {
     position: relative;
 }
 
+.nav-item{
+    color: white;
+}
 .nav-item::after {
     content: "";
     position: absolute;
-    background-color: black;
+    background-color: white;
     bottom: 0;
     left: 0;
     width: 0;
@@ -72,6 +78,7 @@ li {
 .card {
     width: 20%;
     box-shadow: 4px 4px 8px gray;
+    background-color: white;
     margin: 20px;
     border-radius: 8px;
     transition: transform 1s ease;
@@ -104,6 +111,7 @@ form {
     border-radius: 8px;
     width: 40%;
     padding: 2%;
+    min-width: fit-content;
 }
 
 form label::after {
@@ -118,36 +126,25 @@ fieldset {
 /* Estilos para el diálogo */
 dialog {
     border: none;
-    /* Quitar borde predeterminado */
     padding: 20px;
     background-color: white;
     border-radius: 8px;
     width: 80%;
     max-width: 500px;
 
-    /* Transiciones */
     opacity: 0;
-    transform: scale(0.95);
-    /* Comienza ligeramente más pequeño */
-    transition: opacity 2s ease, transform 5s ease;
-    /* Transición suave para opacidad y tamaño */
-
-    /* Estilo de sombra */
+    transition: opacity 1s ease;
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 
-    /* Asegurarse de que el diálogo esté centrado */
+    /*diálogo esté centrado */
     position: fixed;
     top: 50%;
-    /* Posicionar verticalmente en el centro */
     left: 50%;
-    /* Posicionar horizontalmente en el centro */
     transform: translate(-50%, -50%);
-    /* Ajustar el diálogo a su tamaño completo */
 
 }
 
-/* Estilo para el fondo oscuro (overlay) */
+
 dialog::backdrop {
-    background: rgba(151, 49, 49, 0.5);
-    /* Fondo oscuro con opacidad */
+    background-color: rgba(0, 0, 0, .5);
 }
