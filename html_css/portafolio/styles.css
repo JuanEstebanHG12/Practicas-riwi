@@ -6,27 +6,52 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(40, 231, 238, 0.123);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* background-color: rgba(40, 231, 238, 0.123); */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(43, 56, 59, 1) 35%, rgba(0, 0, 0, 1) 100%);
+    color: white;
 }
 
 ul {
     list-style: none;
-    ;
 }
 
 a {
     text-decoration: none;
-    color: black;
 }
 
 main {
     padding: 0 10%;
 }
 
-
 .title-section {
-    text-align: center;
+    font-size:xx-large;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden; 
+  width: 0; 
+  white-space: nowrap; 
+  animation: typing 4s steps(90) 1s forwards;
+}
+
+
+.title-section::after {
+    content: ">";
+    font-weight:bolder;
+    margin: 0 12px;
+}
+
+
+
+.title-section::before {
+    content: "<";
+    font-weight: 700;
+    margin: 0 12px;
+
+}
+
+.paragraph{
+    font-family: 'Tahoma';
 }
 
 /* Navbar */
@@ -39,7 +64,6 @@ header {
     box-shadow: 0px .1px 5px;
     margin-bottom: 50px;
     background-color: black;
-    
 }
 
 .navbar {
@@ -63,12 +87,12 @@ li {
     content: "";
     position: absolute;
     background-color: transparent;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     width: 0;
     height: 5px;
-    transition: width .3s ease;
     background-image: url("https://static.vecteezy.com/system/resources/thumbnails/003/027/376/small/fire-flames-on-abstract-art-black-background-free-photo.jpg");
+    transition: width .3s ease;
     animation: animate 20s linear infinite;
 }
 
@@ -89,7 +113,8 @@ li {
     background-color: white;
     margin: 20px;
     border-radius: 8px;
-    transition: transform 1s ease;
+    color: black;
+    transition: transform .2s ease;
 }
 
 .card:hover {
@@ -160,17 +185,26 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, .5);
 }
 
-
+/* 
 h1{
     background-image: url("https://static.vecteezy.com/system/resources/thumbnails/003/027/376/small/fire-flames-on-abstract-art-black-background-free-photo.jpg");
     background-size: cover;
     background-clip: text;
     color: transparent;
     animation: animate 20s linear infinite;
-}
+} */
 
-@keyframes animate{
-    to{
+@keyframes animate {
+    to {
         background-position: -500px;
     }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
