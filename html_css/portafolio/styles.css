@@ -7,8 +7,6 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular';
-    /* font-family: Arial, Helvetica, sans-serif; */
-    /* background-color: rgba(40, 231, 238, 0.123); */
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(43, 56, 59, 1) 35%, rgba(0, 0, 0, 1) 100%);
     color: white;
 }
@@ -18,6 +16,7 @@ ul {
 }
 
 a {
+    color: white;
     text-decoration: none;
 }
 
@@ -26,18 +25,18 @@ main {
 }
 
 .title-section {
-    font-size:xx-large;
-  font-family: 'Courier New', Courier, monospace;
-  overflow: hidden; 
-  width: 0; 
-  white-space: nowrap; 
-  animation: typing 4s steps(90) 1s forwards;
+    font-size: xx-large;
+    font-family: "Bitcount Grid Single", system-ui;
+    overflow: hidden;
+    width: 0;
+    white-space: nowrap;
+    animation: typing 4s steps(90) 1s forwards;
 }
 
 
 .title-section::after {
     content: ">";
-    font-weight:bolder;
+    font-weight: bolder;
     margin: 0 12px;
 }
 
@@ -50,11 +49,11 @@ main {
 
 }
 
-.paragraph{
+.paragraph {
     font-family: 'Tahoma';
 }
 
-/* Navbar */
+/* #region NavBar */
 header {
     height: 100px;
     display: flex;
@@ -100,6 +99,84 @@ li {
     width: 100%;
 }
 
+/* #endregion */
+
+/* #region about-me */
+.about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me-section .img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: drop-shadow(1px 1px 8px rgba(255, 255, 255, 0.089));
+}
+
+/* #endregion */
+
+/* #region proyects */
+.proyects-container {
+    margin-top: 1em;
+    display: grid;
+    gap: 20px;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.proyect-card {
+    padding: 5%;
+    border: 1px solid rgba(128, 128, 128, 0.288);
+    border-radius: 8px;
+}
+.proyect-card:hover {
+    transform: scale(1.03);
+    transition: all .5s ease;
+}
+
+.container-slider{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.slider {
+    width: 40%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.slide-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100px * 10);
+    /* 4 imágenes x 2 duplicadas */
+    animation: scroll 20s linear infinite;
+}
+
+.slide {
+    width: 100px;
+    /* ancho de cada imagen */
+    height: 100px;
+    /* alto de cada imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* #endregion */
 
 /* Cards mascotas */
 .mascotas-container {
@@ -140,10 +217,10 @@ li {
 
 /* formulario */
 form {
-    border: 1px solid lightgrey;
+    border: 1px solid #72728B;
     border-radius: 8px;
-    width: 80%;
-    padding: 2%;
+    width: 100%;
+    padding: 5%;
     min-width: fit-content;
 }
 
@@ -152,11 +229,21 @@ form label::after {
     color: red;
 }
 
-fieldset {
+
+
+.input-container {
+    width: 70%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    padding: 2%;
+    flex-direction: column;
+}
+
+.input-container>input {
+    border: 0;
+    background-color: transparent;
+    border-bottom: 1px solid green;
+    outline: none;
+    color: white;
+
 }
 
 /* Estilos para el diálogo */
@@ -185,14 +272,6 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, .5);
 }
 
-/* 
-h1{
-    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/003/027/376/small/fire-flames-on-abstract-art-black-background-free-photo.jpg");
-    background-size: cover;
-    background-clip: text;
-    color: transparent;
-    animation: animate 20s linear infinite;
-} */
 
 @keyframes animate {
     to {
@@ -201,10 +280,52 @@ h1{
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+    0% {
+        width: 0;
+    }
+
+    50% {
+        color: violet;
+    }
+
+    100% {
+        width: 100%;
+        color: #76728b;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100px * 5));
+    }
+
+    /* desplaza las originales */
+}
+
+@media (min-width: 768px) {
+    .about-me-section {
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .about-me-section>.about-me {
+        width: 70%;
+    }
+
+    .proyects-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+
+    .proyects-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

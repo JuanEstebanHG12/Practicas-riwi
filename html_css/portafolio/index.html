@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap"
+        rel="stylesheet">
     <title>Portafolio Juan Esteban Holguin</title>
 </head>
 
@@ -19,48 +23,123 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2 class="title-section">Sobre mí</h2>
-            <p class="paragraph">Mi nombre es Juan Esteban, tengo 25 años y vivo en Bello con mi abuela, mi abuelo y mi tia. Soy
-                apasionado
-                por el mundo de la tecnologia y sobretodo en la programación. Actualmente soy estudiante de tecnología
-                en
-                sistemas en la Institución Universitaria Salazar y Herrera, estudiante de la carrera fullstack en la
-                academia argentina CoderHouse y coder en riwi. Mis hobbies son los videojuegos en especial los tactical
-                shooters y el baloncesto</p>
+        <section class="about-me-section">
+            <div class="about-me">
+                <h2 class="title-section">Sobre mí</h2>
+                <p class="paragraph">Mi nombre es Juan Esteban, tengo 25 años y vivo en Bello con mi abuela, mi abuelo y
+                    mi tia. Soy
+                    apasionado
+                    por el mundo de la tecnologia y sobretodo en la programación. Actualmente soy estudiante de
+                    tecnología
+                    en
+                    sistemas en la Institución Universitaria Salazar y Herrera, estudiante de la carrera fullstack en la
+                    academia argentina CoderHouse y coder en riwi. Mis hobbies son los videojuegos en especial los
+                    tactical
+                    shooters y el baloncesto</p>
+            </div>
+            <figure>
+                <img class="img" src="./assets/PNG/cv.png" alt="Descripción de la imagen">
+            </figure>
         </section>
         <section>
             <h2 class="title-section">Proyectos</h2>
-            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iusto quia eaque sint modi. Voluptatem
+            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iusto quia eaque sint
+                modi. Voluptatem
                 hic accusantium veniam voluptates ab sit velit, voluptate rerum optio reiciendis sapiente cupiditate
                 quos eligendi?</p>
-            <ul>
-                <li><a target="_blank" href="https://moodle.riwi.io">Proyecto1</a></li>
-                <li><a target="_blank" href="https://github.com">Proyecto2</a></li>
-                <li><a target="_blank" href="https://chatgpt.com">Proyecto3</a></li>
-                <li><a target="_blank" href="https://v0.app/">Proyecto4</a></li>
+            <ul class="proyects-container">
+                <li><a target="_blank" href="https://moodle.riwi.io">
+                        <div class="proyect-card">
+                            <p>Proyecto1</p>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cum possimus tempora
+                                explicabo repellendus, odio vel adipisci deleniti sequi soluta sed, provident
+                                perspiciatis quam distinctio cumque voluptate dolorem pariatur autem?</p>
+                        </div>
+                    </a></li>
+                <li><a target="_blank" href="https://github.com">
+                        <div class="proyect-card">
+                            <p>Proyecto2</p>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cum possimus tempora
+                                explicabo repellendus, odio vel adipisci deleniti sequi soluta sed, provident
+                                perspiciatis quam distinctio cumque voluptate dolorem pariatur autem?</p>
+                        </div>
+                    </a></li>
+                <li><a target="_blank" href="https://chatgpt.com">
+                        <div class="proyect-card">
+                            <p>Proyecto3</p>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cum possimus tempora
+                                explicabo repellendus, odio vel adipisci deleniti sequi soluta sed, provident
+                                perspiciatis quam distinctio cumque voluptate dolorem pariatur autem?</p>
+                        </div>
+                    </a></li>
+                <li><a target="_blank" href="https://v0.app/">
+                        <div class="proyect-card">
+                            <p>Proyecto4</p>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cum possimus tempora
+                                explicabo repellendus, odio vel adipisci deleniti sequi soluta sed, provident
+                                perspiciatis quam distinctio cumque voluptate dolorem pariatur autem?</p>
+                        </div>
+                    </a></li>
             </ul>
+        </section>
+        <section class="tecnologies-container">
+            <h2>Tecnologias manejadas...</h2>
+            <div class="container-slider">
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide"><img src="./assets/PNG/js.png"></div>
+                        <div class="slide"><img src="./assets/PNG/css.png"></div>
+                        <div class="slide"><img src="./assets/PNG/html.png"></div>
+                        <div class="slide"><img src="./assets/PNG/react.png"></div>
+                        <div class="slide"><img src="./assets/PNG/sass.png"></div>
+
+                        <!-- Duplicado para loop infinito -->
+                        <div class="slide"><img src="./assets/PNG/js.png"></div>
+                        <div class="slide"><img src="./assets/PNG/css.png"></div>
+                        <div class="slide"><img src="./assets/PNG/html.png"></div>
+                        <div class="slide"><img src="./assets/PNG/react.png"></div>
+                        <div class="slide"><img src="./assets/PNG/sass.png"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="tecnologies">
+                <div class="tecnologies-wrapper">
+                    <img src="./assets/PNG/js.png" alt="">
+                    <img src="./assets/PNG/html.png" alt="">
+                    <img src="./assets/PNG/css.png" alt="">
+                    <img src="./assets/PNG/react.png" alt="">
+                    <img src="./assets/PNG/sass.png" alt="">
+
+                    <img src="./assets/PNG/js.png" alt="">
+                    <img src="./assets/PNG/html.png" alt="">
+                    <img src="./assets/PNG/css.png" alt="">
+                    <img src="./assets/PNG/react.png" alt="">
+                    <img src="./assets/PNG/sass.png" alt="">
+                </div>
+            </div> -->
         </section>
         <section>
             <h2 class="title-section">Contacto</h2>
             <div class="contact-section">
                 <form action="">
-                    <fieldset>
-                        <legend>Datos personales</legend>
-                        <div>
-                            <label for="name">Nombre:</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        <div>
-                            <label for="email">Correo:</label>
-                            <input type="email" id="email" required>
-                        </div>
+                    <legend>Datos personales</legend>
+                    <div class="input-container">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="email">Correo:</label>
+                        <input type="email" id="email" required>
+                    </div>
 
-                        <div>
-                            <label for="number">Número:</label>
-                            <input type="number" id="number" required>
-                        </div>
-                    </fieldset>
+                    <div class="input-container">
+                        <label for="number">Número:</label>
+                        <input type="number" id="number" required>
+                    </div>
 
                     <input type="submit" value="Enviar">
                 </form>
