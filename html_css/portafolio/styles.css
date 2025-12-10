@@ -178,17 +178,29 @@ li {
 
 /* #endregion */
 
-/* Cards mascotas */
+/* #region Cards mascotas */
 .mascotas-container {
-    display: flex;
-    flex-wrap: wrap;
+    width: 60%;
+    display: grid;
+    gap: 5em;
+    grid-template-areas: 
+    "animal1 animal1 animal2"
+    "animal3 animal3 animal2";
+}
+.animal1{
+    grid-area: animal1;
+}
+.animal2{
+    grid-area: animal2;
+}
+.animal3{
+    grid-area: animal3;
 }
 
+
 .card {
-    width: 300px;
     box-shadow: 4px 4px 8px gray;
     background-color: white;
-    margin: 20px;
     border-radius: 8px;
     color: black;
     transition: transform .2s ease;
@@ -206,6 +218,7 @@ li {
 .card>p {
     padding: 10px;
 }
+/* #endregion */
 
 /* contact-section */
 .contact-section {
