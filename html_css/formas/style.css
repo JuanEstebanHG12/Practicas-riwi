@@ -27,6 +27,46 @@ body {
     border-radius: 50%;
     background-color: black;
 }
+.boca{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 20px;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+
+}
+.piedra{
+    height: 20px;
+    position: absolute;
+    width: 20px;
+    background-color: #000;
+    border-radius: 50%;
+}
+.piedra:nth-child(1){
+    left: 5%;
+}
+.piedra:nth-child(2){
+    left: 20%;
+    bottom: -50%;
+}
+.piedra:nth-child(3){
+    left: 35%;
+    bottom: -90%;
+}
+.piedra:nth-child(4){
+    left: 50%;
+    bottom: -90%;
+}
+.piedra:nth-child(5){
+    left: 65%;
+    bottom: -50%;
+}
+.piedra:nth-child(6){
+    left: 80%;
+}
 
 .iz {
     top: 35%;
@@ -42,17 +82,146 @@ body {
 
 .pico {
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     left: 50%;
     background-color: brown;
-    height: 30px;
-    width: 30px;
-    transform: skew(10deg) translate(-40%, 90%);
+    height: 20px;
+    width: 90px;
+    transform: skew(80deg) translate(-10%, 30%);
+    border-radius: 40% 40% 0 40%;
 }
 
-.cuerpo{
+.cuerpo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     height: 400px;
     width: 250px;
     border-radius: 50%;
     background-color: #fff;
+}
+.bufanda{
+    position: absolute;
+    top: 0;
+    height: 30px;
+    width: 100px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.cuadros-bufanda:nth-child(2n){
+    height: 100%;
+    width: 20px;
+    background-color: red;
+}
+.cuadros-bufanda:nth-child(2n+1){
+    height: 100%;
+    width: 20px;
+    background-color:yellow;
+}
+
+.botones-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+}
+
+.boton {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.mano {
+    height: 10px;
+    width: 150px;
+    background-color: brown;
+}
+
+.mano-iz {
+    position: absolute;
+    top: 30%;
+    left: -40%;
+    z-index: -1;
+    transform: rotate(5deg)
+}
+
+.mano-der {
+    position: absolute;
+    top: 30%;
+    right: -50%;
+    z-index: -1;
+    transform: rotate(5deg) rotateY(200deg)
+}
+
+.codo {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: brown;
+}
+
+.saludo {
+    animation: saludo 2s infinite;
+
+}
+
+.antebrazo-iz {
+    position: absolute;
+    top: -250%;
+    left: -250%;
+    width: 150px;
+    height: 10px;
+    background-color: brown;
+    transform: rotate(90deg);
+}
+
+.dedo {
+    position: absolute;
+    top: -200%;
+    height: 10px;
+    width: 50px;
+    background-color: brown;
+    transform: rotate(60deg);
+}
+
+.dedo-contrario {
+    position: absolute;
+    top: 200%;
+    height: 10px;
+    width: 50px;
+    background-color: brown;
+    transform: rotate(-65deg);
+}
+
+@keyframes saludo {
+    0% {
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(20deg);
+    }
+}
+@keyframes caer-nieve {
+    from{
+        top: 0;
+        bottom: 0;
+    }
+    
+    to{
+        top: 100%;
+    }
 }
