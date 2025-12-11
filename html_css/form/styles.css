@@ -116,9 +116,16 @@ body {
 }
 
 .tutorial-card .card-header>span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: lightblue;
     padding: .3rem 1rem;
     border-radius: 999px;
+}
+.tutorial-card .card-header>div {
+    text-align: center;
+    line-height: 20px;
 }
 
 .tutorial-card .card-header div {
