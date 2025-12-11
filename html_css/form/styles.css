@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 2%;
+}
+
+.text-opacity {
+    opacity: 40%;
+}
+
+/* .tutorial-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(128, 128, 128, 0.171);
+    border-radius: 24px;
+    border: 1px dashed rgba(128, 128, 128, 0.582);
+} */
+
+/* 
+.tutorial-section p{
+    margin-bottom: 1rem;
+} */
+/* .tutorial-list > p:first-of-type{
+    font-size: 1.5rem;
+} */
+/* .tutorial-list > span{
+    font-size: 7rem;
+    color: rgba(128, 128, 128, 0.452);
+} */
+/* .tutorial-list .offer-tutoring-button{
+    background-color: rgb(3, 131, 190);
+    padding: .5rem;
+    color: white;
+    border-radius: 8px;
+} */
+
+/* tutorial list */
+.tutorial-section h2 {
+    font-size: 54px;
+}
+
+.tutorial-list {
+    display: flex;
+    gap: 16px;
+}
+
+.tutorial-list-section {
+    margin-top: 2rem;
+}
+
+.search-section {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 30px;
+}
+
+.search-section span {
+    width: 5%;
+    text-align: center;
+    font-size: .8rem;
+    padding: .5rem;
+    background-color: rgba(128, 128, 128, 0.479);
+    border-radius: 8px;
+}
+
+.search-section input {
+    width: 90%;
+    padding: .3rem;
+    border-radius: 8px;
+}
+
+
+.tutorial-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 20%;
+    padding: .5rem 2rem;
+    height: 16rem;
+    border-radius: 8px;
+    border: 1px solid gainsboro;
+}
+
+.tutorial-card>.tutorial-description {
+    height: 25%;
+    font-size: .75rem;
+}
+
+.tutorial-card>p {
+    font-size: 2rem;
+}
+
+.tutorial-card .card-header {
+    font-size: .85rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tutorial-card .card-header div span {
+    font-size: 1.2rem;
+    margin-left: .5rem;
+}
+
+.tutorial-card .card-header div {
+    border: 1px solid lightblue;
+    padding: .3rem 1rem;
+    border-radius: 999px;
+}
+
+.tutorial-card .card-header>span {
+    background-color: lightblue;
+    padding: .3rem 1rem;
+    border-radius: 999px;
+}
+
+.tutorial-card .card-header div {
+    display: flex;
+}
+
+.tutorial-user-discord,
+.tutorial-card .tutorial-schedule {
+    display: flex;
+    align-items: center;
+    font-size: .85rem;
+}
+
+.tutorial-user-discord i {
+    font-size: 1.2rem;
+    color: #7289DA;
+}
