@@ -1,0 +1,104 @@
+:root{
+/* ## Colors
+
+### Primary
+ */
+--red-500: hsl(356, 100%, 66%);
+--red-400: hsl(355, 100%, 74%);
+--blue-900: hsl(208, 49%, 24%);
+
+/* ### Neutral */
+
+--white: hsl(0, 100%, 100%);
+--gray-600: hsl(207, 13%, 34%);
+--gray-900: hsl(240, 10%, 16%);
+
+/* ### Gradient */
+
+/* Background gradient - intro/CTA mobile nav: */
+
+--orange-300: hsl(13, 100%, 72%);
+--red-550: hsl(353, 100%, 62%);
+
+/* Background gradient - body:
+ */
+--purple-950: hsl(237, 17%, 21%);
+--purple-900: hsl(237, 23%, 31%);
+
+/* ## Typography
+
+### Body Copy */
+
+--font-size: 16px;
+
+/* ### Fonts
+ */
+/* - Family: [Overpass](https://fonts.google.com/specimen/Overpass?preview.text_type=custom)
+- Weights: 300, 600
+
+- Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu?preview.text_type=custom)
+- Weights: 400, 500, 700
+
+> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
+ */
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+
+}
+
+body{
+}
+ul{
+    list-style: none;
+}
+#menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#toggle-menu{
+    display: none;
+}
+.hero{
+    background-image: url('../images/bg-pattern-intro-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--orange-300);
+    border-radius: 0 0 0 100px;
+    padding: 0 10%;
+}
+.no-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.segunda-seccion{
+    background-color: var(--purple-950);
+    position: relative;
+}
+
+.segunda-seccion figure:first-child img{
+    transform: translateY(-40%);
+}
+.segunda-seccion figure:last-child img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0%, -30%);
+}
+@media (min-width: 992px) {
+    body{
+        font-size: 18px;
+        background-color: red;
+    }
+    .hero{
+        background-image: url('../images/bg-pattern-intro-desktop.svg');
+    }    
+}
