@@ -5,7 +5,6 @@
 
 let edadLocal = localStorage.getItem("edad");
 let nombreLocal = localStorage.getItem("nombre");
-console.log(edadLocal ? "existe" : "No existe");
 if (!nombreLocal) {
     do {
         nombreLocal = prompt("Ingresa tu nombre")
@@ -54,4 +53,20 @@ frutas.forEach((fruta => {
     li.classList.add('fruta')
     lista.appendChild(li)
 }))
+
+// Obtener info de formilario
+localStorage.setItem("listaProductos", JSON.stringify([{
+    name : "jugo",
+    precio : 1000
+}]))
+const formulalrio = document.getElementById('product-form')
+
+formulalrio.addEventListener('submit', (e) =>{
+    e.preventDefault()
+    let listaProductos = JSON.parse(localStorage.getItem("listaProductos"))
+    const nombreProducto = document.getElementById('nombre-producto').value
+    const precioProducto = document.getElementById('precio-producto').value
+    console.log(listaProductos);
+})
+
 
