@@ -1,8 +1,27 @@
 
 
+// let nombre = "Juan"
+// let edad = 25
+
+let edadLocal = localStorage.getItem("edad");
+let nombreLocal = localStorage.getItem("nombre");
+console.log(edadLocal ? "existe" : "No existe");
+if (!nombreLocal) {
+    do {
+        nombreLocal = prompt("Ingresa tu nombre")
+        localStorage.setItem("nombre", nombreLocal) 
+    } while (nombreLocal == "");
+}
+
+if (!edadLocal) {
+    do {
+        edadLocal = Number(prompt("Ingresar edad"))  
+        localStorage.setItem("edad", edadLocal)  
+    } while (edadLocal == false || isNaN(edadLocal));
+}
+
+
 // solicitar variables con prompt
-let nombre = "Juan"
-let edad = 25
 // let nombre = prompt("Ingresa tu nombre")
 // let edad = Number(prompt("Ingresar edad"))
 
@@ -10,8 +29,8 @@ let edad = 25
 let nombreText = document.createElement('p')
 let edadText = document.createElement('p')
 // darles valor al texto de los elementos
-nombreText.textContent = nombre
-edadText.textContent = edad
+nombreText.textContent = nombreLocal
+edadText.textContent = edadLocal
 
 //agregar los elementos al body
 document.body.appendChild(nombreText)
@@ -21,7 +40,7 @@ document.body.appendChild(edadText)
 //obtener boton
 const multiplicarEdad = document.querySelector('#multedad')
 multiplicarEdad.addEventListener('click', ()=> {
-    edadText.textContent = edad*2
+    edadText.textContent = edadLocal*2
 })
 
 
